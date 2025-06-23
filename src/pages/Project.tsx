@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
@@ -292,9 +292,11 @@ function Project() {
                 >
                   <h3 className="text-xl font-bold mb-4">Support This Project</h3>
                   <p className="mb-6 opacity-90">Join us in making a difference for our planet and future generations.</p>
-                  {/* <button className="w-full bg-white text-green-600 hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <button className="w-full bg-white text-green-600 hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    <Link to="/calculator" >
                     Get Involved
-                  </button> */}
+                    </Link>
+                  </button>
                 </motion.div>
               </motion.div>
             </motion.div>

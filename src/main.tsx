@@ -58,6 +58,7 @@ import AdminProposal from "./pages/AdminProposal";
 import AdminMembership from "./pages/AdminMembership";
 import AdminCollaborativePlatform from "./pages/AdmincollaborativePlatforms";
 import AdminAllBusinessDetails from "./pages/AdminAllBusinessDetails";
+import DreamTeam from "./pages/Products/Dream";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,15 @@ const router = createBrowserRouter([
       <>
         <ScrollToTop />
         <Home />
+      </>
+    ),
+  },
+    {
+    path: "/products/Dream",
+    element: (
+      <>
+        <ScrollToTop />
+        <DreamTeam />
       </>
     ),
   },

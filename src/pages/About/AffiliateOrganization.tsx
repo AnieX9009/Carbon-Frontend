@@ -10,18 +10,18 @@ const affiliates = [
     name: "Siddha Vetha",
     imgSrc:
       "https://1world1nation.org/wp-content/uploads/2024/02/Siddha-Vetha_Black-and-white.png",
-    link: "https://siddhavetha.org/",
+    link: "https://www.siddha-vetha.org/",
   },
   {
     name: "Futurecity",
     imgSrc:
       "https://1world1nation.org/wp-content/uploads/2024/02/futurecityLogo.png",
-    link: "https://1world1nation.org/future-city/",
+    link: "/about/future-city",
   },
   {
     name: "Pyramid Divine Home",
     imgSrc: "https://1world1nation.org/wp-content/uploads/2024/02/images.jpeg",
-    link: "https://pyramiddivines.com/",
+    link: "https://www.linkedin.com/company/pyramid-home-divine-dehradun/",
   },
   {
     name: "Yoga Samskrutham University",

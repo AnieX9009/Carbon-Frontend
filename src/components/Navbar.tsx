@@ -46,6 +46,7 @@ const Navbar = () => {
       label: "Products",
       isSubmenu: true,
       subMenu: [
+        { path: "/Dream", label: "Dream" },
         { path: "/uny", label: "UNY" },
         { path: "/bamboohut", label: "Bamboo Hut" },
         { path: "/divinehealer", label: "Divine Healer" },

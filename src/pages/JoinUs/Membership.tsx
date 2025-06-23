@@ -42,7 +42,7 @@ const fadeIn = {
 
 // Icon animation variants
 const iconVariants = {
-  rest: { 
+  rest: {
     scale: 1,
     rotate: 0,
     transition: { duration: 0.3 }
@@ -50,10 +50,10 @@ const iconVariants = {
   hover: {
     scale: 1.2,
     rotate: [0, 10, -10, 0], // Gentle wiggle effect
-    transition: { 
+    transition: {
       duration: 0.6,
-      rotate: { 
-        repeat: Infinity, 
+      rotate: {
+        repeat: Infinity,
         duration: 1.5,
         ease: "easeInOut"
       }
@@ -79,7 +79,7 @@ const Membership: React.FC = () => {
           animate="visible"
           variants={fadeIn}
         >
-          <motion.div 
+          <motion.div
             className="relative z-10 text-center space-y-4"
             variants={itemVariants}
           >
@@ -87,29 +87,29 @@ const Membership: React.FC = () => {
               Membership
             </h1>
           </motion.div>
-          <motion.img 
-            src={curve} 
-            className="absolute bottom-0 w-full" 
-            alt="curve" 
+          <motion.img
+            src={curve}
+            className="absolute bottom-0 w-full"
+            alt="curve"
             variants={itemVariants}
           />
         </motion.div>
 
         {/* Membership Benefits */}
-        <motion.div 
+        <motion.div
           className="px-5 md:px-20 lg:px-40 py-16 bg-white text-gray-800"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold text-green-600 mb-6"
             variants={itemVariants}
           >
             SFUO Membership
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             className="text-lg leading-relaxed text-gray-600 mb-10"
             variants={itemVariants}
           >
@@ -117,7 +117,7 @@ const Membership: React.FC = () => {
           </motion.p>
 
           {/* Individual Membership */}
-          <motion.section 
+          <motion.section
             className="mb-14 bg-gray-50 p-6 md:p-10 rounded-lg shadow"
             variants={itemVariants}
             whileHover={{ y: -5 }}
@@ -165,7 +165,7 @@ const Membership: React.FC = () => {
           </motion.section>
 
           {/* Corporate Membership */}
-          <motion.section 
+          <motion.section
             className="mb-14 bg-gray-100 p-6 md:p-10 rounded-lg shadow"
             variants={itemVariants}
             whileHover={{ y: -5 }}
@@ -213,7 +213,7 @@ const Membership: React.FC = () => {
           </motion.section>
 
           {/* Futurecity Options */}
-          <motion.section 
+          <motion.section
             className="mb-14"
             variants={itemVariants}
           >
@@ -231,7 +231,7 @@ const Membership: React.FC = () => {
             </div>
 
             {/* Build My Home */}
-            <motion.div 
+            <motion.div
               className="mb-8 bg-gray-50 p-5 md:p-8 rounded-lg shadow"
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
@@ -246,7 +246,7 @@ const Membership: React.FC = () => {
             </motion.div>
 
             {/* Educate My Child */}
-            <motion.div 
+            <motion.div
               className="mb-8 bg-gray-100 p-5 md:p-8 rounded-lg shadow"
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
@@ -271,7 +271,7 @@ const Membership: React.FC = () => {
           </motion.section>
 
           {/* Refund Policy */}
-          <motion.section 
+          <motion.section
             className="mb-14 bg-gray-50 p-6 md:p-10 rounded-lg shadow"
             variants={itemVariants}
             whileHover={{ y: -5 }}
@@ -297,7 +297,7 @@ const Membership: React.FC = () => {
           </motion.section>
 
           {/* Contact Information */}
-          <motion.section 
+          <motion.section
             className="mb-14 bg-gray-100 p-6 md:p-10 rounded-lg shadow"
             variants={itemVariants}
             whileHover={{ y: -5 }}
@@ -318,7 +318,7 @@ const Membership: React.FC = () => {
               Interested in becoming a member or learning more about futurecity options? Reach out to us:
             </p>
             <address className="text-lg not-italic leading-relaxed text-gray-600">
-              Society for Universal Oneness and futurecity Inc.<br />
+              1234 FF Ave Society for Universal Oneness and futurecity Inc..<br />
               100 Saint Ayers Way,<br />
               Chapel Hill, NC 27517-2362, USA<br />
               <a href="mailto:member@1world1nation.org" className="text-blue-600 underline hover:text-blue-800">
