@@ -15,6 +15,7 @@ import AwardsProgram from "../components/Awards/AwardsProgram";
 // import ContentComponent from "../components/Awards/Content";
 import BarbaraThieleAwards from "../components/Awards/BarbaraThieleAwards";
 import SmoothScroll from "../components/SmoothScroll";
+import AwardOverview from "../components/Awards/AwardOverview";
 // import { MissionSection } from "../components/Awards/MissionSection";
 
 function Awards() {
@@ -96,7 +97,7 @@ function Awards() {
               </TabsContent>
             </Tabs>
           </section> */}
-
+<AwardOverview />
           <AwardsProgram />
           <section className="bg-[#6e6e6e39] p-4 md:p-8 lg:p-12 text-gray-700 space-y-4 md:space-y-6">
             <BarbaraThieleAwards />
