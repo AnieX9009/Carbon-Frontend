@@ -1,6 +1,6 @@
 //AwardOverview.tsx
 import { motion } from "framer-motion";
-import { Award,  FileText, Users,  FlaskConical, Globe, Calendar, Target, Scale, Zap, GraduationCap, Heart, Languages, CheckCircle } from "lucide-react";
+import {  FileText, Users,  FlaskConical, Globe, Calendar, Target, Scale, Zap, GraduationCap, Heart, Languages, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import  { useState } from "react";
 
