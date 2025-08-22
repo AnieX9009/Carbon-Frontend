@@ -1,3 +1,4 @@
+//AwardOverview.tsx
 import { motion } from "framer-motion";
 import { Award,  FileText, Users,  FlaskConical, Globe, Calendar, Target, Scale, Zap, GraduationCap, Heart, Languages, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
@@ -96,7 +97,6 @@ const AwardOverview = () => {
     { id: "eligibility", name: "Eligibility", icon: <CheckCircle className="w-4 h-4" /> },
     { id: "application", name: "Application", icon: <FileText className="w-4 h-4" /> },
     { id: "selection", name: "Selection", icon: <Target className="w-4 h-4" /> },
-    { id: "recipients", name: "Recipients", icon: <Award className="w-4 h-4" /> },
     { id: "trl", name: "TRL Reference", icon: <FlaskConical className="w-4 h-4" /> }
   ];
 
@@ -104,78 +104,120 @@ const AwardOverview = () => {
     switch (activeTab) {
       case "about":
         return (
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="bg-green-50 p-6 rounded-lg border border-green-200"
             >
-              <div>
-                <h3 className="text-lg font-semibold mb-2 text-green-700 flex items-center gap-2">
-                  <Heart className="w-5 h-5" />
-                  Barbara Thiele Award
-                </h3>
-                <p className="text-muted-foreground">
-                  Honors Barbara Thiele, a lifelong advocate for unity, compassion, and humanitarian progress. 
-                  Recognizes innovators combining technological or scientific innovation with compassion for humanity.
+              <h3 className="text-xl font-semibold mb-4 text-green-800">About Barbara Thiele</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <p className="text-muted-foreground mb-4">
+                    Born on March 19, 1976, to Marita and Hans-Michael Thiele, Barbara grew up in Werne, Germany. 
+                    She was a friendly and affectionate girl who loved caring for her younger brother, with whom 
+                    she remained deeply connected.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Her parents fondly recall attending Itzhak Perlman's concerts with Barbara, even meeting him 
+                    backstage—a moment of pure joy for her. With a unique love for classical music, Barbara had 
+                    only a few, but true friends.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-4">
+                    Barbara was never concerned with being "everyone's darling" and enjoyed spending time reading 
+                    and daydreaming. She also had a deep love for animals, often using her allowance to buy food 
+                    for a neglected cat in her neighborhood.
+                  </p>
+                  <p className="text-muted-foreground">
+                    As a figure of respect and forgiveness, Barbara led by example and demonstrated unwavering values. 
+                    She performed concerts worldwide, uniting people through music without seeking credit or acclaim.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 p-4 bg-white rounded-lg">
+                <p className="text-green-700 font-medium">
+                  Tragically, Barbara passed away on Nov 6, 2017. Her philosophy endures, promoting love, respect, 
+                  and forgiveness. March 19 is now celebrated as the "Birth of Humanity," and Nov 6 as the "Day of Forgiveness."
                 </p>
               </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold mb-2 text-green-700 flex items-center gap-2">
-                  <Zap className="w-5 h-5" />
-                  G. Venkatasubramaniyan (GVS) Award
-                </h3>
-                <p className="text-muted-foreground">
-                  Commemorates Venkat Iyer, known as the 'Nikola Tesla of India'. Celebrates invention, research, 
-                  entrepreneurship, and humanitarian service that transforms society through compassion-driven innovation.
-                </p>
-              </div>
+            </motion.div>
 
-              <div className="bg-green-100 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2 text-green-800">Technology Readiness Levels (TRLs)</h4>
-                <p className="text-sm text-muted-foreground">
-                  Applicants should reference TRLs when describing their projects. The scale ranges from TRL 1 (basic principles observed) 
-                  to TRL 9 (actual system proven and deployed).
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-green-50 p-6 rounded-lg"
-            >
-              <h3 className="text-xl font-semibold mb-4 text-green-800">Award Focus Areas</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Scientific and technological innovation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Peace and social betterment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Environmental sustainability</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Humanitarian service</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Education and research</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Arts and cultural innovation</span>
-                </li>
-              </ul>
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6"
+              >
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-green-700 flex items-center gap-2">
+                    <Heart className="w-5 h-5" />
+                    Barbara Thiele Award
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Honors Barbara Thiele, a lifelong advocate for unity, compassion, and humanitarian progress. 
+                    Recognizes innovators combining technological or scientific innovation with compassion for humanity.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-green-700 flex items-center gap-2">
+                    <Zap className="w-5 h-5" />
+                    G. Venkatasubramaniyan (GVS) Award
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Commemorates Venkat Iyer, known as the 'Nikola Tesla of India'. Celebrates invention, research, 
+                    entrepreneurship, and humanitarian service that transforms society through compassion-driven innovation.
+                  </p>
+                </div>
+
+                <div className="bg-green-100 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2 text-green-800">Technology Readiness Levels (TRLs)</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Applicants should reference TRLs when describing their projects. The scale ranges from TRL 1 (basic principles observed) 
+                    to TRL 9 (actual system proven and deployed).
+                  </p>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-green-50 p-6 rounded-lg"
+              >
+                <h3 className="text-xl font-semibold mb-4 text-green-800">Award Focus Areas</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">•</span>
+                    <span>Scientific and technological innovation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">•</span>
+                    <span>Peace and social betterment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">•</span>
+                    <span>Environmental sustainability</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">•</span>
+                    <span>Humanitarian service</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">•</span>
+                    <span>Education and research</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">•</span>
+                    <span>Arts and cultural innovation</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
           </div>
         );
       
@@ -381,44 +423,6 @@ const AwardOverview = () => {
           </div>
         );
       
-      case "recipients":
-        return (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-green-100">
-                    <th className="p-3 text-left font-semibold text-green-800 border-b border-green-200">Date</th>
-                    <th className="p-3 text-left font-semibold text-green-800 border-b border-green-200">Recipient</th>
-                    <th className="p-3 text-left font-semibold text-green-800 border-b border-green-200">Award</th>
-                    <th className="p-3 text-left font-semibold text-green-800 border-b border-green-200">Contribution</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {awardRecipients.map((recipient, index) => (
-                    <motion.tr 
-                      key={index}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="border-b border-green-100 hover:bg-green-50"
-                    >
-                      <td className="p-3 text-sm">{recipient.date}</td>
-                      <td className="p-3 font-medium">{recipient.recipient}</td>
-                      <td className="p-3 text-green-700">{recipient.award}</td>
-                      <td className="p-3 text-muted-foreground text-sm">{recipient.contribution}</td>
-                    </motion.tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </motion.div>
-        );
-      
       case "trl":
         return (
           <motion.div
@@ -487,11 +491,67 @@ const AwardOverview = () => {
       </div>
 
       {/* Main Content */}
-      <Card className="border-0 shadow-lg overflow-hidden">
+      <Card className="border-0 shadow-lg overflow-hidden mb-12">
         <CardContent className="p-6 md:p-8">
           {renderContent()}
         </CardContent>
       </Card>
+
+      {/* Award Recipients Section - Separate from tabs */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-16"
+      >
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-400">
+            Award Recipients
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            Recognizing exceptional individuals and organizations for their contributions to humanity
+          </p>
+        </div>
+
+        <Card className="border-0 shadow-lg overflow-hidden">
+          <CardContent className="p-6 md:p-8">
+            <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200 mb-6">
+              <p className="text-yellow-800 font-medium">
+                The following individuals and organizations have been recognized for their exceptional contributions to humanity through various awards.
+              </p>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse bg-white rounded-lg shadow-md">
+                <thead>
+                  <tr className="bg-green-600">
+                    <th className="p-3 text-left font-semibold text-white border-b border-green-700">Date</th>
+                    <th className="p-3 text-left font-semibold text-white border-b border-green-700">Recipient</th>
+                    <th className="p-3 text-left font-semibold text-white border-b border-green-700">Award</th>
+                    <th className="p-3 text-left font-semibold text-white border-b border-green-700">Contribution</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {awardRecipients.map((recipient, index) => (
+                    <motion.tr 
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="border-b border-green-100 hover:bg-green-50 even:bg-green-50"
+                    >
+                      <td className="p-3 text-sm font-medium">{recipient.date}</td>
+                      <td className="p-3 font-medium text-green-800">{recipient.recipient}</td>
+                      <td className="p-3 text-green-700 font-semibold">{recipient.award}</td>
+                      <td className="p-3 text-muted-foreground text-sm">{recipient.contribution}</td>
+                    </motion.tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
     </div>
   );
 };

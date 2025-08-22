@@ -205,7 +205,7 @@ const About: React.FC = () => {
 
         {/* Newsletter */}
         <Newsletter />
-        <Footer />
+ <Footer />
       </div>
     </SmoothScroll>
   );
